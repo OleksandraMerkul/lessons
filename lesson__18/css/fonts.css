@@ -1,0 +1,10 @@
+
+@font-face {
+    font-family: "DM Sans"; 
+    src: url("../fonts/DMSans-Regular.woff2") format("woff2");   
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("../fonts/WorkSans-Regular.woff2") format("woff2");  
+}
