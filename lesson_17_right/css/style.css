@@ -1,0 +1,306 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url("fonts.css");
+@import url("reset.css");
+/* 
+body {
+	font-family: "Epilogue", sans-serif;
+	color: #FFF;
+	font-size: 16px;
+
+	background-color: #FDF0E9; */
+
+
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+  
+	font-family: "Epilogue", sans-serif;
+	color: #ffffff;
+	background-color: #28293e;
+  }
+  
+  .wrapper > main {
+	flex-grow: 1;
+  }
+  
+  [class*="__container"] {
+	max-width: 1200px;
+	margin-inline: auto;
+	padding-inline: 15px;
+  }
+  /*==============================================================================================================*/
+  /*==============================================================================================================*/
+  
+  /*==============================================================================================================*/
+  /* header */
+  /*==============================================================================================================*/
+  .header {
+	padding-block: 30px;
+	background-color: #181818;
+  }
+  .header__container {
+	text-align: center;
+  }
+  .header__container h1 {
+	margin-bottom: 20px;
+	font-size: 45px;
+  }
+  /*==============================================================================================================*/
+  /*==============================================================================================================*/
+  
+  /*==============================================================================================================*/
+  /* portfolio section */
+  /*==============================================================================================================*/
+  .latest-work {
+	padding-block: 96px 92px;
+	background-color: #28293e;
+  }
+  .latest-work__container {
+  }
+  
+  .latest-work__heading {
+	margin-bottom: 68px;
+	text-align: center;
+  }
+  .section-heading {
+  }
+  
+  /* заголовки табів */
+  .tabs {
+	max-width: 574px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	column-gap: 20px;
+  }
+  .tabs__item {
+	color: rgba(255, 255, 255, 0.64);
+  }
+  .tabs__item--active {
+	color: #ffffff;
+  }
+  .tabs__item sup {
+	display: inline-block;
+	transform: translateY(-50%);
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.64);
+  }
+  
+  .latest-work__cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px 30px;
+  }
+  .latest-work__cards:not(:last-child) {
+	margin-bottom: 64px;
+  }
+  .latest-work__card { position: relative;
+	width: fit-content; /* width: fit-content; вказано щоб посилання яке є флекс елементом було по ширині контенту а не флекс контейнера */
+	line-height: 2;
+  }
+  
+  /* картка */
+  .card-portfolio {
+	position: relative;
+	min-height: 416px;
+	flex-basis: 470px;
+	padding: 51px 48px;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: grey;
+  }
+  /* алгоритм (4n + 2) для вказання розміру другій картці з чотирьох */
+  .card-portfolio:nth-child(4n + 2) {
+	flex-basis: 670px;
+  }
+  /* алгоритм (4n + 3) для вказання розміру третій картці з чотирьох */
+  .card-portfolio:nth-child(4n + 3) {
+	flex-basis: 670px;
+  }
+  .card-portfolio img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s;
+	will-change: transform; /* will-change найчастіше вказується при трансформаціях щоб вона була плавною */
+  }
+  .card-portfolio::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transform: scaleY(100%);
+	width: 100%;
+	height: 100%;
+	opacity: 0.3181;
+	transition: transform 0.5s;
+	transform-origin: top;
+	background-color: #5c2000;
+  }
+  .card-portfolio:hover::before {
+	transform: scaleY(0);
+	transform-origin: bottom;
+  }
+  .card-portfolio:hover img {
+	transform: scale(1.1);
+  }
+  
+  /* контент картки */
+  .card-portfolio__content {
+	position: relative;
+	z-index: 2;
+  }
+  .card-portfolio__category {
+	width: fit-content;
+	padding: 5px 15px 2px;
+	margin-bottom: 23px;
+	border-radius: 19px;
+	line-height: 2; /* 200% */
+	color: #391400;
+	background-color: #fff;
+  }
+  .card-portfolio__title {
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 1.2; /* 120% */
+  }
+  .latest-work__button {
+
+  }
+
+
+
+/* 
+
+=======================================
+
+.portfolio__list {
+	margin-bottom: 68px;
+}
+/* .list__wrapper {
+
+
+;} */
+
+	
+
+.list__items {	display: grid;	
+	grid-template-columns: repeat(5, 120px);
+	color:rgba(57, 20, 0, 0.64);
+	font-weight: 400;
+	line-height: 200%; 
+	justify-items: center; 
+	justify-content: center;
+
+
+}
+/* ================================================ */
+ .cards__wrapper {
+	display: grid;
+	grid-template-columns: repeat (auto-fill, minmax(1fr 1fr)); 
+	gap: 30px;
+
+
+justify-content:center;
+
+ } 
+
+ /* or */
+ /* .cards__wrapper {
+ display: grid;
+ gap: 20px;
+ grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+	grid-auto-rows: 1fr;} */
+
+
+
+
+.cards__content {
+	position: relative;
+	z-index: 2;
+	display: block;
+}
+
+
+a { position: absolute;
+	z-index: 2;
+	top: 256px;
+	left: 50px;
+	width: fit-content;
+	padding: 5px 15px;
+	margin-bottom: 80px;
+	border-radius: 19px;
+	line-height: 2; /* 200% */
+	color: #391400;
+	background-color: #fff;
+	
+  }
+  .cards__title {
+	position: absolute;
+	z-index: 2;
+	top: 317px;
+	left: 50px;
+
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 1.2; 
+  }
+  .cards__image {position: relative;
+z-index: 0;}
+
+
+
+
+.cards__item--big{
+
+align-items: end;
+width: 1140x;
+grid-column: span 2;
+
+position: relative;
+z-index: 0;
+border-radius: 6px;
+
+
+} 
+
+	.cards__link--big
+	
+	/* .cards__item--big:nth-child(3)  */
+	{
+
+		position: absolute;
+		z-index: 2;
+		top: 544px;
+		left: 50px;
+		width: fit-content;
+		padding: 5px 15px;
+		margin-bottom: 80px;
+		border-radius: 19px;
+		line-height: 2; /* 200% */
+		color: #391400;
+		background-color: #fff;	
+	}
+
+.cards__title--big {
+/* .cards__item--big:nth-child(4)  { */
+		position: absolute;
+		z-index: 2;
+		top: 608px;
+		left: 50px;
+	
+		font-size: 56px;
+		font-weight: 800;
+		line-height: 1.2; } */
