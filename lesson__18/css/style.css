@@ -38,9 +38,7 @@ width: 100%;
 text-align: center;
 padding-block: 50px;}
 
-.grid {
-padding-block: 30px;
-}
+
 
 .grid__items {
 display: grid;
@@ -158,6 +156,8 @@ left: 5px;}
 }
 .footer {
 text-align: center;
+padding-block: 15px;
+font-size: 25px;
 }
 
 .item:nth-child(17n + 14){
